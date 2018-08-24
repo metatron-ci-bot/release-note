@@ -13,8 +13,10 @@ res = urllib2.urlopen(req)
 
 json_obj = json.load(res)
 
+sorted_obj = sorted(json_obj['items'], key=lambda k: k['number'])
+
 f = open('result', 'w')
-for item in json_obj['items']:
+for item in sorted_obj:
     f.write("#")
     f.write(str(item['number']))
     f.write(" "+item['title'])
