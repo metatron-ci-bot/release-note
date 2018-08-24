@@ -13,5 +13,10 @@ res = urllib2.urlopen(req)
 
 json_obj = json.load(res)
 
+f = open('result', 'w')
 for item in json_obj['items']:
-        print "#"+str(item['number']), item['title']
+    f.write("#")
+    f.write(str(item['number']))
+    f.write(" "+item['title'])
+    f.write("\n")
+f.close()
