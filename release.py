@@ -26,12 +26,12 @@ for line in lines:
 result_file = open('resultfile', 'w')
 
 for key in a.keys():
-        print '##'+key.capitalize()
+#        print '##'+key.capitalize()
         result_file.write('## ')
         result_file.write(key.capitalize())
         result_file.write('\n')
         for val in a.get(key):
-                print val
+#                print val
                 result_file.write(val)
                 result_file.write('\n')
         result_file.write('\n')
