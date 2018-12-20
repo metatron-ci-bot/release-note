@@ -32,7 +32,7 @@ for key in a.keys():
         result_file.write('\n')
         for val in a.get(key):
 #                print val
-                result_file.write(val)
+                result_file.write(val.replace(u'\xa0', ' ').encode('utf-8'))
                 result_file.write('\n')
         result_file.write('\n')
 
