@@ -18,9 +18,9 @@ for line in lines:
         for label in line['labels']:
                 if "@" not in label['name']:
                         if label['name'] not in a.keys():
-                                a[label['name']]=['#'+str(line['number'])+' '+line['title']]
+                                a[label['name']]=[line['title'] + ' (#'+str(line['number']) + ')']
                         else:
-                                a[label['name']].append('#'+str(line['number'])+' '+line['title'])
+                                a[label['name']].append(line['title'] + ' (#'+str(line['number']) + ')')
 
 #Write results file
 result_file = open('resultfile', 'w')
